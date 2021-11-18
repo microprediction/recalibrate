@@ -20,9 +20,9 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.7",
     ],
-    packages=["recalibrate"],
+    packages=["recalibrate","recalibrate.inclusion"],
     test_suite='pytest',
-    tests_require=['pytest','microprediction','scikit-learn','scipy'],
+    tests_require=['pytest','winning'],
     include_package_data=True,
     install_requires=[],
     entry_points={
