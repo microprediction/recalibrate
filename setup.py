@@ -22,7 +22,7 @@ setup(
     ],
     packages=["recalibrate","recalibrate.inclusion"],
     test_suite='pytest',
-    tests_require=['pytest','winning'],
+    tests_require=['pytest','winning','scikit-learn'],
     include_package_data=True,
     install_requires=[],
     entry_points={
