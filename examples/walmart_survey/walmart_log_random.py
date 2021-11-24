@@ -30,7 +30,7 @@ if __name__=='__main__':
     df = pd.read_csv(LOGISTIC_CSV)
     import numpy as np
 
-    from recalibrate.transforms.activation import ACTIVATIONS
+    from recalibrate.unarytransforms.activation import ACTIVATIONS
     import random
     best_so_far = 0.1
     while True:

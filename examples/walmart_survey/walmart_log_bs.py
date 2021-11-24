@@ -33,7 +33,7 @@ if __name__=='__main__':
     df = normalize_surveys(df, by='survey_id', prob_col='p2')
 
 
-    from recalibrate.transforms.activation import ACTIVATIONS
+    from recalibrate.unarytransforms.activation import ACTIVATIONS
 
     f = ACTIVATIONS['bs']
     COEFS = [(a,b) for a in range(50,200,5) for b in range(10,200,5)]

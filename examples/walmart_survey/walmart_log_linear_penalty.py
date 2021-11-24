@@ -32,7 +32,7 @@ if __name__=='__main__':
     df = pd.read_csv(LOGISTIC_CSV)
 
 
-    from recalibrate.transforms.activation import ACTIVATIONS
+    from recalibrate.unarytransforms.activation import ACTIVATIONS
 
     f = ACTIVATIONS['bs']
     COEFS = [(a,b) for a in range(0,100,5) for b in [95,100,105,110,115,120]]

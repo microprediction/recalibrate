@@ -30,7 +30,7 @@ if __name__=='__main__':
     df = pd.read_csv(LOGISTIC_CSV)
 
 
-    from recalibrate.transforms.activation import ACTIVATIONS
+    from recalibrate.unarytransforms.activation import ACTIVATIONS
     for a, f in ACTIVATIONS.items():
         print(a)
         df['p_'+a] = (1.0*(df['log_p1']-df['log_p2']).apply(f) + df['log_p2']).apply(math.exp)
