@@ -37,7 +37,7 @@ if __name__=='__main__':
         df_test = transform(df_test, by='survey_id', prob_col='p1', new_col='p1', r=best_r)
 
     # See if it helps (it does, a little bit)
-    briers = {'brier after transforms':brier_score_loss(df_train['y'], df_train['p1']),
+    briers = {'brier after transforms':brier_score_loss(df_test['y'], df_test['p1']),
               'brier before transforms':brier_score_loss(df_test['y'], df_test['p1_copy'])}
     pprint(briers)
 

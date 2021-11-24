@@ -26,8 +26,8 @@ if __name__=='__main__':
     df_test = transform(df_test, by='survey_id', prob_col='p1', new_col='p1_prime', r=best_r)
 
     # See if it helps (it does, a little bit)
-    briers = {'brier p1':brier_score_loss(df_train['y'], df_train['p1']),
-              'brier p1 prime':brier_score_loss(df_test['y'], df_test['p1_prime'])}
+    briers = {'brier before calibration':brier_score_loss(df_test['y'], df_test['p1']),
+              'brier after calibration':brier_score_loss(df_test['y'], df_test['p1_prime'])}
     pprint(briers)
 
 
