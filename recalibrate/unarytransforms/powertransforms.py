@@ -11,7 +11,7 @@ def dataframe_transform_factory(transform, df, by, r, prob_col, new_col):
         return df_group
 
     kwargs = {'r':r, 'prob_col':prob_col, 'new_col':new_col }
-    df = df.groupby(by=by).apply( _transform_within_group, **kwargs )
+    df = df.groupby(by=by, group_keys=False).apply( _transform_within_group, **kwargs )
     return df
 
 

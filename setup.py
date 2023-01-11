@@ -22,7 +22,7 @@ setup(
     ],
     packages=["recalibrate","recalibrate.inclusion"],
     test_suite='pytest',
-    tests_require=['pytest','winning>=0.4.1','scikit-learn'],
+    tests_require=['pytest','winning>=0.4.9','scikit-learn'],
     include_package_data=True,
     install_requires=['pandas','nevergrad','humpday','scikit-learn'],
     entry_points={
