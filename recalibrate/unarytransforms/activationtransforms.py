@@ -13,6 +13,10 @@ def one_param_activation_transform_factory(a_name, df, by, r, prob_col, new_col)
     return dataframe_transform_factory(transform=transform, df=df, by=by, r=r,prob_col=prob_col,new_col=new_col)
 
 
+def id_transform(df, by, r, prob_col, new_col):
+    return one_param_activation_transform_factory(a_name='id', df=df, by=by, r=r, prob_col=prob_col, new_col=new_col)
+
+
 def pw_transform(df, by, r, prob_col, new_col):
     return one_param_activation_transform_factory(a_name='pw', df=df, by=by, r=r, prob_col=prob_col, new_col=new_col)
 

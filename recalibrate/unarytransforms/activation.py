@@ -2,7 +2,8 @@
 import math
 
 
-ACTIVATIONS = {'pw':lambda x: 2*(1 if x > 3 else 0 if x < -3 else 1/6*x+1/2)-1.0,
+ACTIVATIONS = {'id':lambda x: x,
+               'pw':lambda x: 2*(1 if x > 3 else 0 if x < -3 else 1/6*x+1/2)-1.0,
                'hs':lambda x: 1 if x > 0 else -1,
                'sg':lambda x: 2*(1 / (1 + math.exp(-x)))-1.0,
                'bs':lambda x: (1 - math.exp(-x)) / (1 + math.exp(-x)),
@@ -11,7 +12,8 @@ ACTIVATIONS = {'pw':lambda x: 2*(1 if x > 3 else 0 if x < -3 else 1/6*x+1/2)-1.0
                'st':lambda x: (2/math.pi)*math.atan(max(0.1 * x, x)),
                'et':lambda x: (2/math.pi)*math.atan(x) if x > 0 else 0.5 * (math.exp(x) - 1)}
 
-INVERSE_ACTIVATIONS = {'ht': lambda y: -0.5*math.log(2/(y+1)-1) if y<1 else 100000000,
+INVERSE_ACTIVATIONS = {'id': lambda y: y,
+                       'ht': lambda y: -0.5*math.log(2/(y+1)-1) if y<1 else 100000000,
                        'ln': lambda y: 5*(y-0.5) }
 
 if __name__=='__main__':

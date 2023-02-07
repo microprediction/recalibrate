@@ -137,4 +137,6 @@ dmypy.json
 private_data/*
 recalibrate/privateutil
 recalibrate/privateutil/*.*
+private_examples/*
+private_kalman/*
 
